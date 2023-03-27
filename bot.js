@@ -1,4 +1,7 @@
-const token = 'MTA4ODAxMzQyNjU5MDIzMjY0Ng.GtR5uD.0wryED1BWQ4rwA7OryZv5xs_YS00I8aD9Xz_DM'
+require("dotenv").config();
+
+let ballReply = ["yes","no","maybe","consider it your last","don't do it","do it","your mom"]
+
 
 console.log("I am a bot, bip bop")
 const { Client, Events, GatewayIntentBits } = require('discord.js');
@@ -11,7 +14,7 @@ GatewayIntentBits.GuildMessages,
 partials: ['MESSAGE', 'CHANNEL']
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN)
 
 client.once(Events.ClientReady, onReady);
 
@@ -19,13 +22,16 @@ function onReady(c) {
 console.log(`Ready! Logged in as ${c.user.tag}`);
 };
 
+
 client.on(Events.MessageCreate, onMessage);
-
-
     function onMessage(msg){
-        if(msg.content.includes("du er grim")){
-            msg.reply("Hold din fucking kæft dit røvhul")
+        if(msg.content.includes("!ask")){
+            let i = Math.floor(Math.random() * ballReply.length);
+            msg.reply(ballReply[i])
         }
-    
+        if(msg.content.includes("!roll")){
+            let i = Math.floor(Math.random() * (max - min + 1) + min)
+            msg.reply(i)
 
+        }
 }
