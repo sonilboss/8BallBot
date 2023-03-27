@@ -41,10 +41,14 @@ client.on(Events.MessageCreate, onMessage);
         if(msg.content.includes("!gif")){
             let array1=msg.content.split(" ")
             let gifs = ["https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif","https://media.tenor.com/fzcZe2pe6iAAAAAM/good.gif","https://media.tenor.com/pJXFJRIYRaUAAAAS/baby-girl-middle-finger.gif","https://media.tenor.com/6s1dVm9ckjQAAAAS/league-league-of-legends.gif"]
-            
             let gifNumber = array1[2]
+
+            if(gifNumber>gifs.length){
+                msg.reply("Sorry, I don't have that many gifs. Please choose a a number between 0 and "+gifs.length)
+
+            }else if (gifNumber<gifs.length) {
             let y =[""]
             msg.reply(y+gifs[gifNumber])
-
+            }
         }
 }
