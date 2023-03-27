@@ -31,12 +31,19 @@ client.on(Events.MessageCreate, onMessage);
         }
         if(msg.content.includes("!roll")){
             let array = msg.content.split(" ")
-            console.log(array)
             min = Math.ceil(array[2])
             max = Math.ceil(array[3])
             let test = Math.floor(Math.random() * (max - min + 1) + min)
             let w =[""]
             msg.reply(w+test)
+
+        }
+        if(msg.content.includes("!gif")){
+            let array1=msg.content.split(" ")
+            let gifs = ["https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif","https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif"]
+            console.log(array1)
+            let y =[""]
+            msg.reply(
 
         }
 }
