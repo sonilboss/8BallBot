@@ -30,8 +30,13 @@ client.on(Events.MessageCreate, onMessage);
             msg.reply(ballReply[i])
         }
         if(msg.content.includes("!roll")){
-            let i = Math.floor(Math.random() * (max - min + 1) + min)
-            msg.reply(i)
+            let array = msg.content.split(" ")
+            console.log(array)
+            min = Math.ceil(array[2])
+            max = Math.ceil(array[3])
+            let test = Math.floor(Math.random() * (max - min + 1) + min)
+            let w =[""]
+            msg.reply(w+test)
 
         }
 }
