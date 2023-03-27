@@ -40,10 +40,11 @@ client.on(Events.MessageCreate, onMessage);
         }
         if(msg.content.includes("!gif")){
             let array1=msg.content.split(" ")
-            let gifs = ["https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif","https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif"]
-            console.log(array1)
+            let gifs = ["https://media.tenor.com/u4DTDP287_kAAAAM/sus-suspect.gif","https://media.tenor.com/fzcZe2pe6iAAAAAM/good.gif","https://media.tenor.com/pJXFJRIYRaUAAAAS/baby-girl-middle-finger.gif","https://media.tenor.com/6s1dVm9ckjQAAAAS/league-league-of-legends.gif"]
+            
+            let gifNumber = array1[2]
             let y =[""]
-            msg.reply(
+            msg.reply(y+gifs[gifNumber])
 
         }
 }
