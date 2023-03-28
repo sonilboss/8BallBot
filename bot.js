@@ -51,4 +51,7 @@ client.on(Events.MessageCreate, onMessage);
             msg.reply(y+gifs[gifNumber])
             }
         }
+        if(msg.content.includes("!placeholder")){
+            msg.reply("placeholder")
+        }
 }
