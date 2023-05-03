@@ -3,7 +3,7 @@ require("dotenv").config();
 let ballReply = ["yes","no","maybe","consider it your last","don't do it","do it","your mom"]
 
 
-console.log("I am a bot, bip bop")
+console.log("I am a bot, motherfucker")
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 const client = new Client({
 intents: [
